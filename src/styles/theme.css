@@ -1,0 +1,252 @@
+@import 'tailwindcss';
+@import '@fontsource/bangers';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@theme {
+  --color-navy-twilight: #151b2e;
+  --color-navy-deep: #0f1424;
+  --color-signal-red: #e4364a;
+  --color-web-blue: #2f5da8;
+  --color-paper-white: #f4f1e8;
+  --color-impact-amber: #f2b84b;
+
+  --font-display: 'Bangers', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --hero-bg: url('/assets/hero-bg.jpg');
+  color-scheme: dark;
+}
+
+/* Portrait artwork frames far better on tall, narrow viewports. */
+@media (max-width: 767px) {
+  :root {
+    --hero-bg: url('/assets/hero-bg-mobile.jpg');
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-slow-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 14s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 14s linear infinite;
+}
+
+/* Glass panels: low opacity so the section artwork reads through, with heavy
+   backdrop-blur doing the legibility work instead of a solid fill. The paired
+   inset shadows fake a real bevel — light catching the top edge, shadow
+   pooling at the bottom — which is what separates this from a flat rectangle. */
+.glass {
+  position: relative;
+  background: linear-gradient(
+    155deg,
+    rgba(244, 241, 232, 0.1) 0%,
+    rgba(244, 241, 232, 0.03) 44%,
+    rgba(15, 20, 36, 0.34) 100%
+  );
+  backdrop-filter: blur(20px) saturate(1.35);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35);
+  border: 1px solid rgba(244, 241, 232, 0.14);
+  box-shadow:
+    inset 0 1px 0 0 rgba(244, 241, 232, 0.22),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.4),
+    0 24px 50px -28px rgba(0, 0, 0, 0.85);
+}
+
+/* Corner registration marks — inset so they sit inside the rounded corner
+   rather than fighting it. Red top-left, blue bottom-right. */
+.glass-marks::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.35s ease;
+  background:
+    linear-gradient(90deg, rgba(228, 54, 74, 0.7) 0 13px, transparent 13px) 0 0 / 100% 1px no-repeat,
+    linear-gradient(180deg, rgba(228, 54, 74, 0.7) 0 13px, transparent 13px) 0 0 / 1px 100% no-repeat,
+    linear-gradient(270deg, rgba(47, 93, 168, 0.65) 0 13px, transparent 13px) 100% 100% / 100% 1px
+      no-repeat,
+    linear-gradient(0deg, rgba(47, 93, 168, 0.65) 0 13px, transparent 13px) 100% 100% / 1px 100%
+      no-repeat;
+}
+.glass-marks:hover::after {
+  opacity: 1;
+}
+
+.glass-hover {
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.glass-hover:hover {
+  background: linear-gradient(
+    155deg,
+    rgba(244, 241, 232, 0.15) 0%,
+    rgba(244, 241, 232, 0.06) 44%,
+    rgba(15, 20, 36, 0.38) 100%
+  );
+  border-color: rgba(244, 241, 232, 0.26);
+  box-shadow:
+    inset 0 1px 0 0 rgba(244, 241, 232, 0.32),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.4),
+    0 28px 56px -28px rgba(0, 0, 0, 0.9);
+}
+
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+.animate-swing {
+  animation: swing 3.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* fx: spotlight-card — cursor-tracking glow, driven by --spot-x/--spot-y/--spot-color set in JS */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(
+    280px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    var(--spot-color, transparent),
+    transparent 72%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+.spotlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* fx: click-spark — one radiating particle, angle/color set inline per instance */
+@keyframes spark-fly {
+  0% {
+    transform: rotate(var(--spark-angle)) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--spark-angle)) translateX(26px) scale(0);
+    opacity: 0;
+  }
+}
+.spark-particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--spark-color, #e4364a);
+  transform-origin: 0 0;
+  animation: spark-fly 0.5s ease-out forwards;
+}
+
+/* fx: electric-border — pulsing glow for high-emphasis CTAs */
+@keyframes electric-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0px rgba(228, 54, 74, 0.35),
+      0 0 0px rgba(47, 93, 168, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(228, 54, 74, 0.5),
+      0 0 46px rgba(47, 93, 168, 0.3);
+  }
+}
+.electric-border {
+  animation: electric-pulse 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-spin-slow,
+  .animate-spin-slow-reverse,
+  .animate-swing,
+  .electric-border,
+  .spark-particle {
+    animation: none;
+    display: none;
+  }
+  .spotlight-card::before {
+    display: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-navy-twilight);
+  color: var(--color-paper-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: var(--color-signal-red);
+  color: var(--color-paper-white);
+}

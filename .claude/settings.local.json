@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\Saif\\\\Documents\\\\saif-portfolio\"; & \".\\\\node_modules\\\\.bin\\\\oxlint.cmd\"; Write-Output \"EXITCODE:$LASTEXITCODE\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => /git|linked|hub/i.test\\(k\\)\\)\\)\")",
+      "Bash(node --input-type=module -e \"import * as l from 'lucide-react'; console.log\\(Object.keys\\(l\\).filter\\(k => /git|linked|hub/i.test\\(k\\)\\)\\)\")",
+      "Bash(node --input-type=module -e \"import * as l from 'lucide-react'; ['Mail','Phone','Code2','Users','Contact2','UserSquare2','Link2','ExternalLink'].forEach\\(n => console.log\\(n, !!l[n]\\)\\)\")",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(rm src/lib/useTilt.js)",
+      "Bash(npm run *)",
+      "PowerShell(cd \"C:\\\\Users\\\\Saif\\\\Documents\\\\saif-portfolio\"; & \".\\\\node_modules\\\\.bin\\\\oxlint.cmd\"; Write-Output \"LINT_EXIT:$LASTEXITCODE\")"
+    ]
+  }
+}
