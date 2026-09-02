@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Download, Mail, Phone } from 'lucide-react'
-import contactBg from '../assets/spiderman-filmmaker-01-qlbv-superJumbo.jpeg'
+import contactBg from '../assets/spiderman-filmmaker-01-qlbv-superJumbo.webp'
 import { contact, hero, links } from '../data/content'
 import { fadeUp } from '../lib/motion'
 import ClickSpark from './fx/ClickSpark'

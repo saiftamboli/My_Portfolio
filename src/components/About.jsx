@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Award, GraduationCap } from 'lucide-react'
-import aboutBg from '../assets/Hero_Main_page.jpg'
+import aboutBg from '../assets/Hero_Main_page.webp'
 import { about, education, recognition } from '../data/content'
 import { fadeUp } from '../lib/motion'
 import SectionBackground from './ui/SectionBackground'

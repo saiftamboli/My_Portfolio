@@ -1,4 +1,4 @@
-import projectsBg from '../assets/thumb-1920-1009981.jpg'
+import projectsBg from '../assets/thumb-1920-1009981.webp'
 import { projects } from '../data/content'
 import ArchiveCard from './projects/ArchiveCard'
 import ProjectCard from './projects/ProjectCard'

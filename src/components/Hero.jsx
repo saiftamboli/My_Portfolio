@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
+import heroBgDesktop from '../assets/Hero_section.webp'
+import heroBgMobile from '../assets/for mobile view.webp'
 import { hero, links } from '../data/content'
 import { fadeUp } from '../lib/motion'
 import ClickSpark from './fx/ClickSpark'
@@ -27,14 +29,26 @@ function Hero() {
       id="top"
       className="relative flex min-h-svh w-full flex-col overflow-hidden bg-navy-deep"
     >
+      {/* <picture> rather than a CSS background: a media-query custom property
+          makes the browser fetch both candidate images, srcset fetches only
+          the matching one. */}
       <motion.div
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'var(--hero-bg)' }}
+        className="absolute inset-0"
         aria-hidden="true"
-      />
+      >
+        <picture>
+          <source media="(max-width: 767px)" srcSet={heroBgMobile} />
+          <img
+            src={heroBgDesktop}
+            alt=""
+            fetchPriority="high"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
+      </motion.div>
 
       <div
         aria-hidden="true"

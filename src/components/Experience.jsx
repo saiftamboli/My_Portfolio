@@ -1,4 +1,4 @@
-import experienceBg from '../assets/spider-man-brand-new-day.jpg'
+import experienceBg from '../assets/spider-man-brand-new-day.webp'
 import { experience } from '../data/content'
 import SectionBackground from './ui/SectionBackground'
 import SectionHeading from './ui/SectionHeading'

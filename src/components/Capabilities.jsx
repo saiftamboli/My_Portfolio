@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { BadgeCheck, BarChart3, Database, Layers } from 'lucide-react'
-import capabilitiesBg from '../assets/Landing_page_loading_image.jpeg'
+import capabilitiesBg from '../assets/Landing_page_loading_image.webp'
 import { capabilities, certifications } from '../data/content'
 import { fadeUp } from '../lib/motion'
 import CapabilityCard from './capabilities/CapabilityCard'

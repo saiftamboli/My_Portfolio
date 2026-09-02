@@ -18,15 +18,7 @@
 }
 
 :root {
-  --hero-bg: url('/assets/hero-bg.jpg');
   color-scheme: dark;
-}
-
-/* Portrait artwork frames far better on tall, narrow viewports. */
-@media (max-width: 767px) {
-  :root {
-    --hero-bg: url('/assets/hero-bg-mobile.jpg');
-  }
 }
 
 html {

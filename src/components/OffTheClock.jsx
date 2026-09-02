@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { BookOpen, Mountain, Puzzle, Zap } from 'lucide-react'
-import offClockBg from '../assets/spiderman_scroll_effect.jpg'
+import offClockBg from '../assets/spiderman_scroll_effect.webp'
 import { extracurricular, hobbies } from '../data/content'
 import { fadeUp } from '../lib/motion'
 import SectionBackground from './ui/SectionBackground'
