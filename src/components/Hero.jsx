@@ -112,7 +112,7 @@ function Hero() {
           custom={0.2}
           className="relative mt-5 font-body text-sm font-bold uppercase tracking-[0.22em] text-paper-white sm:text-lg sm:tracking-[0.3em]"
         >
-          Product Analyst <span className="text-signal-red">×</span> Data-Driven Problem Solver
+          {hero.roleParts[0]} <span className="text-signal-red">×</span> {hero.roleParts[1]}
         </motion.p>
 
         <motion.p

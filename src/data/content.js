@@ -12,15 +12,17 @@ export const links = {
 
 export const hero = {
   name: 'Saif Tamboli',
-  role: 'Product Analyst | Data-Driven Problem Solver',
-  tagline: 'Turning operational chaos into scalable, AI-powered systems.',
+  // Rendered either side of a red "x" in Hero.jsx
+  roleParts: ['Product Analyst @ RevCloud', 'Ex-Morningstar'],
+  tagline:
+    'Analytics to understand the problem. Product thinking to define the fix. AI tools to actually ship it.',
   location: 'Pune, MH',
 }
 
 export const about = {
-  bio: 'I turn messy operational workflows into systems that scale. Right now that means productizing affiliate operations into AI capabilities at Alyson.ai. Before that, equity research at Morningstar: 24K+ reports a year, finding signal in the noise.',
+  bio: 'Product Analyst at RevCloud with 2.4 years across product and data analytics. I work with PMs on Alyson, turning operational workflows into PRDs and shipping 8+ affiliate workflows as AI capabilities across 300+ partnerships. Before that, equity research at Morningstar: 24K+ reports a year, SQL validation, and automation that cut 15 hours of manual entry weekly. Outside work I build analytics products like RetailMate.ai.',
   stats: [
-    { value: 2, suffix: '+', label: 'Years Experience' },
+    { value: 2.4, suffix: ' yrs', label: 'Product & Data' },
     { value: 300, suffix: '+', label: 'Partnerships Scaled' },
     { value: 30, suffix: 'h', label: 'Saved Weekly' },
   ],
