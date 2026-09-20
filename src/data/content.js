@@ -14,7 +14,7 @@ export const hero = {
   name: 'Saif Tamboli',
   // Rendered either side of a red "x" in Hero.jsx
   roleParts: ['Product Analyst', 'Data-Driven Problem Solver'],
-  tagline: 'Turning operational chaos into scalable, AI-powered systems.',
+  tagline: 'Product Analyst at RevCloud with 2.4 years across product and data analytics.',
   location: 'Pune, MH',
 }
 
