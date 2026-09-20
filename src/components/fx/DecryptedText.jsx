@@ -4,7 +4,7 @@ const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&$@!?*'
 
 /**
  * Reveals `text` character-by-character, showing scrambled placeholder
- * glyphs for not-yet-resolved characters. Runs once on mount — this is a
+ * glyphs for not-yet-resolved characters. Runs once on mount, since this is a
  * first-impression moment, not a repeating gimmick.
  */
 function DecryptedText({ text, className = '', speed = 35, revealDelay = 300 }) {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { BadgeCheck, BarChart3, Database, Layers } from 'lucide-react'
+import { BadgeCheck, BarChart3, Database, ExternalLink, Workflow, Wrench } from 'lucide-react'
 import capabilitiesBg from '../assets/Landing_page_loading_image.webp'
 import { capabilities, certifications } from '../data/content'
 import { fadeUp } from '../lib/motion'
@@ -8,9 +8,10 @@ import SectionBackground from './ui/SectionBackground'
 import SectionHeading from './ui/SectionHeading'
 
 const ICONS = {
-  'Data & Query': Database,
-  'Analytics & BI': BarChart3,
-  'Product & Process': Layers,
+  'Languages & Databases': Database,
+  'Visualization & BI': BarChart3,
+  'Product & Analytics': Workflow,
+  'Tools & Platforms': Wrench,
 }
 
 const ACCENTS = [
@@ -36,7 +37,7 @@ function Capabilities() {
       <div className="relative mx-auto max-w-5xl">
         <SectionHeading tag="04" title="Capabilities" subtitle="The stack behind the work." />
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {capabilities.map((group, index) => (
             <CapabilityCard
               key={group.category}
@@ -61,9 +62,22 @@ function Capabilities() {
           </p>
           <ul className="mt-3 grid gap-x-8 gap-y-2 sm:grid-cols-2">
             {certifications.map((cert) => (
-              <li key={cert} className="flex items-start gap-2.5 font-body text-sm text-paper-white/70">
-                <BadgeCheck size={16} className="mt-0.5 shrink-0 text-web-blue" />
-                {cert}
+              <li key={cert.name}>
+                <a
+                  href={cert.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-start gap-2.5 font-body text-sm text-paper-white/70 transition-colors hover:text-paper-white"
+                >
+                  <BadgeCheck size={16} className="mt-0.5 shrink-0 text-web-blue" />
+                  <span>
+                    {cert.name}
+                    <ExternalLink
+                      size={12}
+                      className="ml-1.5 inline shrink-0 align-baseline text-paper-white/30 transition-colors group-hover:text-impact-amber"
+                    />
+                  </span>
+                </a>
               </li>
             ))}
           </ul>

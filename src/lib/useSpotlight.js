@@ -2,7 +2,7 @@ import { useRef } from 'react'
 
 /**
  * Returns props to spread onto any element to get the `.spotlight-card`
- * cursor-tracking glow (see theme.css) without requiring a wrapper div —
+ * cursor-tracking glow (see theme.css) without requiring a wrapper div,
  * useful when the target is already a framer-motion element.
  */
 export function useSpotlight(spotlightColor = 'rgba(228, 54, 74, 0.16)') {

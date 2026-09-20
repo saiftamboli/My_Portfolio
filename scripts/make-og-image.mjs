@@ -2,7 +2,7 @@
  * Generates the 1200x630 social preview card (public/og-image.jpg) shown
  * when the site is shared on LinkedIn, WhatsApp, X, Slack, etc.
  *
- * JPEG rather than WebP on purpose — several social scrapers still
+ * JPEG rather than WebP on purpose: several social scrapers still
  * handle WebP poorly and will silently show no image at all.
  *
  * Run with: npm run og
@@ -47,4 +47,4 @@ await sharp(SOURCE)
   .toFile(OUTPUT)
 
 const { size } = await stat(OUTPUT)
-console.log(`Wrote ${path.relative(process.cwd(), OUTPUT)} — ${W}x${H}, ${Math.round(size / 1024)} KB`)
+console.log(`Wrote ${path.relative(process.cwd(), OUTPUT)}: ${W}x${H}, ${Math.round(size / 1024)} KB`)

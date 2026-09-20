@@ -44,8 +44,8 @@ html {
 
 /* Glass panels: low opacity so the section artwork reads through, with heavy
    backdrop-blur doing the legibility work instead of a solid fill. The paired
-   inset shadows fake a real bevel — light catching the top edge, shadow
-   pooling at the bottom — which is what separates this from a flat rectangle. */
+   inset shadows fake a real bevel: light catching the top edge, shadow
+   pooling at the bottom. That is what separates this from a flat rectangle. */
 .glass {
   position: relative;
   background: linear-gradient(
@@ -63,7 +63,7 @@ html {
     0 24px 50px -28px rgba(0, 0, 0, 0.85);
 }
 
-/* Corner registration marks — inset so they sit inside the rounded corner
+/* Corner registration marks, inset so they sit inside the rounded corner
    rather than fighting it. Red top-left, blue bottom-right. */
 .glass-marks::after {
   content: '';
@@ -130,7 +130,7 @@ html {
   transform-origin: top center;
 }
 
-/* fx: spotlight-card — cursor-tracking glow, driven by --spot-x/--spot-y/--spot-color set in JS */
+/* fx: spotlight-card. Cursor-tracking glow, driven by --spot-x/--spot-y/--spot-color set in JS */
 .spotlight-card {
   position: relative;
   isolation: isolate;
@@ -158,7 +158,7 @@ html {
   z-index: 1;
 }
 
-/* fx: click-spark — one radiating particle, angle/color set inline per instance */
+/* fx: click-spark. One radiating particle, angle/color set inline per instance */
 @keyframes spark-fly {
   0% {
     transform: rotate(var(--spark-angle)) translateX(0) scale(1);
@@ -181,7 +181,7 @@ html {
   animation: spark-fly 0.5s ease-out forwards;
 }
 
-/* fx: electric-border — pulsing glow for high-emphasis CTAs */
+/* fx: electric-border. Pulsing glow for high-emphasis CTAs */
 @keyframes electric-pulse {
   0%,
   100% {

@@ -2,7 +2,7 @@
  * Converts raster images in src/assets to WebP.
  *
  * These are all full-bleed background images, so anything wider than
- * MAX_EDGE is detail nobody will ever see — downscaling first is where
+ * MAX_EDGE is detail nobody will ever see. Downscaling first is where
  * most of the saving comes from, WebP encoding does the rest.
  *
  * Run with: npm run images

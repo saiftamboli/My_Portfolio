@@ -31,7 +31,7 @@ const viewport = { once: true, margin: '-80px' }
 function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-20 overflow-hidden bg-navy-deep">
-      {/* Blurred ambient fill — shows behind/around the sharp photo, mainly visible on the left under the text */}
+      {/* Blurred ambient fill: shows around the sharp photo, mainly on the left under the text */}
       <div
         aria-hidden="true"
         className="absolute inset-0 scale-110"
@@ -44,7 +44,7 @@ function Contact() {
         }}
       />
 
-      {/* Sharp, un-cropped photo — full image, anchored right, nothing zoomed or lost */}
+      {/* Sharp, un-cropped photo: full image, anchored right, nothing zoomed or lost */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
@@ -80,7 +80,7 @@ function Contact() {
             className="inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.3em] text-impact-amber"
           >
             <span className="h-px w-8 bg-impact-amber/60" aria-hidden="true" />
-            06 — Get in Touch
+            06 / Get in Touch
           </motion.span>
 
           <motion.h2
@@ -164,7 +164,7 @@ function Contact() {
 
         <footer className="mt-12 border-t border-paper-white/10 pt-5">
           <p className="font-body text-xs text-paper-white/40">
-            © {new Date().getFullYear()} {hero.name} — {hero.location}
+            © {new Date().getFullYear()} {hero.name} · {hero.location}
           </p>
         </footer>
       </div>

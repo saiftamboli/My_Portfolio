@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
  * Fills its parent section with a parallaxed image plus a legibility scrim.
  * Parent must be `relative overflow-hidden`.
  *
- * The image is texture, not subject — it should read as mood/color in the
+ * The image is texture, not subject. It should read as mood/color in the
  * margins, never compete with foreground text. `.glass` cards add further
  * local contrast, but the section scrim still needs to do most of the work.
  */
