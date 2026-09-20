@@ -13,7 +13,7 @@ export const links = {
 export const hero = {
   name: 'Saif Tamboli',
   // Rendered either side of a red "x" in Hero.jsx
-  roleParts: ['Product Analyst @ RevCloud', 'Ex-Morningstar'],
+  roleParts: ['Product Analyst', 'Data-Driven Problem Solver'],
   tagline: 'Turning operational chaos into scalable, AI-powered systems.',
   location: 'Pune, MH',
 }
