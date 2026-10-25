@@ -32,7 +32,7 @@
 
 ## 3. About Section
 
-> I'm a Product Analyst with 2+ years of experience bridging data, operations, and AI. Currently at Alyson.ai (RevCloud), I productize messy operational workflows into scalable AI-powered capabilities. Before that, I spent time in equity research, dissecting financial statements at scale for Morningstar. I care about finding the signal in the noise — whether that's an affiliate funnel losing conversions or a churn pattern hiding in 10,000 rows of customer data.
+> I'm a Product Analyst with 3+ years of experience bridging data, operations, and AI. Currently at Alyson.ai (RevCloud), I productize messy operational workflows into scalable AI-powered capabilities. Before that, I spent time in equity research, dissecting financial statements at scale for Morningstar. I care about finding the signal in the noise — whether that's an affiliate funnel losing conversions or a churn pattern hiding in 10,000 rows of customer data.
 
 **STATUS: PLACEHOLDER** — Saif to provide a more personal version in his own voice (optional).
 
@@ -41,7 +41,7 @@
 ## 4. Work Experience
 
 ### Product Analyst — Alyson.ai (RevCloud)
-**Jan 2026 – Present | Pune, MH**
+**Jun 2025 – Present | Pune, MH**
 - Domain expert for affiliate operations — identified bottlenecks, defined business requirements, and validated feature builds to accelerate AI-powered workflow automation.
 - Productized 8+ affiliate workflows into scalable AI capabilities using APIs and AI agents, supporting 300+ affiliate partnerships and cutting operational effort by 60%.
 - Optimized affiliate acquisition across email, SMS, native, and social channels — improved campaign performance by 15%.
