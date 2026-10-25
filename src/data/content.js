@@ -14,14 +14,14 @@ export const hero = {
   name: 'Saif Tamboli',
   // Rendered either side of a red "x" in Hero.jsx
   roleParts: ['Product Analyst', 'Data-Driven Problem Solver'],
-  tagline: 'Product Analyst at RevCloud with 2.4 years across product and data analytics.',
+  tagline: 'Product Analyst at RevCloud with 3+ years across product and data analytics.',
   location: 'Pune, MH',
 }
 
 export const about = {
-  bio: 'Product Analyst at RevCloud with 2.4 years across product and data analytics. I work with PMs on Alyson, turning operational workflows into PRDs and shipping 8+ affiliate workflows as AI capabilities across 300+ partnerships. Before that, equity research at Morningstar: 24K+ reports a year, SQL validation, and automation that cut 15 hours of manual entry weekly. Outside work I build analytics products like RetailMate.ai.',
+  bio: 'Product Analyst at RevCloud with 3+ years across product and data analytics. I work with PMs on Alyson, turning operational workflows into PRDs and shipping 8+ affiliate workflows as AI capabilities across 300+ partnerships. Before that, equity research at Morningstar: 24K+ reports a year, SQL validation, and automation that cut 15 hours of manual entry weekly. Outside work I build analytics products like RetailMate.ai.',
   stats: [
-    { value: 2.4, suffix: ' yrs', label: 'Product & Data' },
+    { value: 3, suffix: '+ yrs', label: 'Product & Data' },
     { value: 300, suffix: '+', label: 'Partnerships Scaled' },
     { value: 30, suffix: 'h', label: 'Saved Weekly' },
   ],
@@ -43,7 +43,7 @@ export const experience = [
   {
     role: 'Product Analyst',
     company: 'RevCloud',
-    period: 'Jan 2026 - Present',
+    period: 'Jun 2025 - Present',
     location: 'Pune, MH',
     bullets: [
       "Partner with PMs and cross-functional teams on Alyson, RevCloud's AI workflow automation platform, translating operational workflows into business requirements, PRDs, and validated features.",
